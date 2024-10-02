@@ -254,7 +254,7 @@ export default function DataPage() {
       </nav>
 
       <div style={{ height: 400, width: "100%", marginTop: "20px" }}>
-        <DataGrid rows={rows} columns={columns} pageSize={5} />
+        <DataGrid className="dark:text-white"  rows={rows} columns={columns} pageSize={5} />
       </div>
 
       <Modal
@@ -279,7 +279,7 @@ export default function DataPage() {
       overflowY: 'auto',  // Enable scrolling if content is too large
           }}
         >
-          <h2 id="screenshot-modal-title" className="mb-4">
+          <h2 id="screenshot-modal-title" className="mb-4 ">
             Screenshot for {selectedUser?.firstname}
           </h2>
           {selectedUser?.ticketInfo?.screenshot_Url && (
@@ -297,11 +297,11 @@ export default function DataPage() {
             />
           )}
           {selectedUser?.ticketInfo?.utrno && (
-            <div className="mb-4">
+            <div className="mb-4 ">
               <strong>UTR Number:</strong> {selectedUser.ticketInfo.utrno}
             </div>
           )}
-          <div className="mb-4">
+          <div className="mb-4 ">
                     <label htmlFor="amount" className="mr-2">
                         Amount:
                     </label>
@@ -320,7 +320,7 @@ export default function DataPage() {
                         }}
                     />
                 </div>
-          <div className="flex items-center mb-4">
+          <div className="flex items-center mb-4 ">
             <input
               type="checkbox"
               id="approve"

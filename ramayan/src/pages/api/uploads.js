@@ -6,8 +6,10 @@ import dbConnect from "@/lib/database";
 
 // Initialize AWS S3
 const s3 = new aws.S3({
-  accessKeyId: "AKIAQ3EGUBYBZD6YKHWZ", // Replace with your actual access key
-  secretAccessKey: "waEiCGsYqdLHoCDZg82z3IbZPMKg6GayuOMo3VXr", // Replace with your actual secret key
+  accessKeyId: process.env.accessKeyId,
+  // "AKIAQ3EGUBYBZD6YKHWZ", // Replace with your actual access key
+  secretAccessKey: process.env.secretAccessKey,
+  //  "waEiCGsYqdLHoCDZg82z3IbZPMKg6GayuOMo3VXr", // Replace with your actual secret key
   region: 'ap-south-1', // Your AWS region
 });
 
